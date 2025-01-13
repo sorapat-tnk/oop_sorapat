@@ -1,32 +1,32 @@
 class Product:
-    def __init__(self, name, stock):
+    def init(self,name,stock):
         self.name = name
-        self.__price = []
-        self.__stock = stock
+        self.price = [700]
+        self.stock = stock
     def add(self):
-        self.__stock += instock
+        self.stock += instock
     def dis(self):
-        self.__stock -= instock
+        self.stock -= instock
     def edit(self):
-        inprice = int(input('ใส่ราคาสินค้า '))
-        self.__price.append(inprice)
+        inprice = int(input('กรอกราคาสินค้า'))
+        self.price[0] = inprice
     def detail(self):
-        return (f'(มีราคา {self.__price} บาท จำนวน {self.__stock} ชิ้น)')
+        return (f'(มีราคา {self.price} บาท จำนวน {self.__stock} ชิ้น)')
 
-pro1 = Product('Miku', 0)
+st1 = Product('dildo',0)
+
 while True:
-    choice = input('กรุณาเลือกฟังก์ชัน: ต้องการเพิ่มพิมพ์ว่า add ถ้าจะลดจำนวนให้พิมพ์ dis ถ้าจะเช็ครายการสินค้าให้พิมพ์ check ถ้าต้องการแก้ไขราคาพิมพ์ว่า edit ออกพิมพ์ว่า exit: ')
-    if choice == 'add':
-        instock = int(input('ใส่จำนวนที่ต้องการเพิ่ม: '))
-        pro1.add()
-    elif choice == 'dis':
-        instock = int(input('ใส่จำนวนที่ต้องการลด: '))
-        pro1.dis()
-    elif choice == 'check':
-        print(f'รายการสินค้า {pro1.name} มีรายละเอียดดังนี้ {pro1.detail()}')
-    elif choice == 'edit':
-        pro1.edit()
-    elif choice == 'exit':
+    choiec = input('กรุณาเลือกฟังชั่นถ้าต้องการเพิ่มพิมคำว่า add ถ้าจะลดจำนวนให้พิม dis ถ้าจะเช็คสินค้าพิมว่า check ถ้าต้องการแก้ไขราคาพิมว่า edit ออกพิมคำว่า exit : ')
+    if choiec == 'add':
+        instock = int(input('ใส่จำนวนที่ต้องการเพิ่ม : '))
+        st1.add()
+    elif choiec == 'dis':
+        instock = int(input('ใส่จำนวนที่ต้องการเพิ่ม : '))
+        st1.dis()
+    elif choiec == 'check':
+        print(f'รายการสินค้า{st1.name}มีรายละเอียดดังนี้{st1.detail()}')
+    elif choiec =='edit':
+        st1.edit()
+    elif choiec == 'exit':
         break
-pro1.edit()
-print(f'รายการสินค้า {pro1.name} มีรายละเอียดดังนี้ {pro1.detail()}')
+print(f'รายการสินค้า{st1.name}มีรายละเอียดดังนี้{st1.detail()}')
